@@ -1,6 +1,6 @@
 # TA-TeamWork-CSharpOOP
 
-Team DURIAN
+ Team DURIAN
 
 1. Илиана Бобера
 
