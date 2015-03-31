@@ -6,6 +6,13 @@
         private string publisher;
         private int year;
 
+        public ReadbleItem(string name, string publisher, int year)
+        {
+            this.Name = name;
+            this.Publisher = publisher;
+            this.Year = year;
+        }
+
         public string Name
         {
             get { return this.name; }
