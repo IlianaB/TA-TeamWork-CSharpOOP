@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Library.Books" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAIAAIQCAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Books.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Magazine" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Magazine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Newspaper" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Newspaper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.ReadbleItem" Collapsed="true">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAgAAACIAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReadbleItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.ReadOnSpot" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>ReadOnSpot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Start" Collapsed="true">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Start.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.TakeAway" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAIA=</HashCode>
+      <FileName>TakeAway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.User" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Admin" Collapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Library.GenresEnum" Collapsed="true">
+    <Position X="14" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAEAAABAAAAgQAAAAAAAAAAQAAAgAgAACAAA=</HashCode>
+      <FileName>GenresEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
