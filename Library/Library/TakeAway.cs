@@ -2,7 +2,7 @@
 {
     using System;
 
-    public abstract class TakeAway : ReadbleItem
+    public abstract class TakeAway : ReadableItem
     {
         public DateTime DateRented { get; protected set; }
         public DateTime DateReturned { get; protected set; }

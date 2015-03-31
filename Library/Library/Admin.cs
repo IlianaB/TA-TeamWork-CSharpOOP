@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    public class Admin: Profile
+    public class Admin : Profile, IAdmin
     {
         private ProfileType profileType;
 
@@ -16,11 +16,9 @@
             set { this.profileType = value; }
         }
 
-        public void AddBook(string name, string author, Genres genre)
+        public void AddReadableItem(IReadable readable)
         {
-            Book book = new Book();
-            book.Author = author;
-            book.Name = name;
-        }
+            throw new System.NotImplementedException();
+        }        
     }
 }
