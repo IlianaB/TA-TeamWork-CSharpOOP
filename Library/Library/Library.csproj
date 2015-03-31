@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="Comment.cs" />
     <Compile Include="Genres.cs" />
     <Compile Include="Magazine.cs" />
     <Compile Include="Newspaper.cs" />
