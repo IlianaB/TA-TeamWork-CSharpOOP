@@ -47,6 +47,7 @@
     <Compile Include="Magazine.cs" />
     <Compile Include="Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
+    <Compile Include="Rating.cs" />
     <Compile Include="ReadbleItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="Start.cs" />
