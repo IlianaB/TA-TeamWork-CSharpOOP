@@ -9,7 +9,5 @@
         public int NumberOfItemsTaken { get; set; }
         
 
-
-
     }
 }

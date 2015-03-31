@@ -1,19 +1,26 @@
 ﻿namespace Library
 {
-    public class Admin: User
+    public class Admin: Profile
     {
-        private bool hasAdminRights;
+        private ProfileType profileType;
 
-        public bool HasAdminRights { get; set; }
-
-        public void AddBook(string name, string author, GenresEnum genre)
+        public Admin(string name, string password) 
+            :base(name, password)
         {
-            Books book = new Books();
-            book.Author = author;
-            book.Name = name;
-            book.Genre = genre.ToString();
+            this.ProfileType = ProfileType.Administrator;
         }
 
+        public ProfileType ProfileType
+        {
+            get { return this.profileType; }
+            set { this.profileType = value; }
+        }
 
+        public void AddBook(string name, string author, Genres genre)
+        {
+            Book book = new Book();
+            book.Author = author;
+            book.Name = name;
+        }
     }
 }

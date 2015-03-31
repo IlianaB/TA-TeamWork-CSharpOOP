@@ -42,16 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="Books.cs" />
-    <Compile Include="GenresEnum.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Genres.cs" />
     <Compile Include="Magazine.cs" />
     <Compile Include="Newspaper.cs" />
+    <Compile Include="ProfileType.cs" />
     <Compile Include="ReadbleItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TakeAway.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Profile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

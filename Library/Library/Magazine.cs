@@ -9,7 +9,10 @@
         
         }
 
-        public string Issue { get; set; }
-
+        public string Issue
+        {
+            get { return this.issue; }
+            set { this.issue = value; }
+        }
     }
 }

@@ -2,12 +2,27 @@
 {
     public abstract class ReadbleItem
     {
-        public string publisher;
-        public string nameID;
-        public int year;
+        private string name;
+        private string publisher;
+        private int year;
 
-        public string  Publisher { get; set; }
-        public string NameID { get; set; }
-        public int Year {get; set;}
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+        public string Publisher
+        {
+            get { return this.publisher; }
+            set { this.publisher = value; }
+        }
+
+        public int Year
+        {
+            get { return this.year; }
+            set { this.year = value; }
+        }
+
     }
 }

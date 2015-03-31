@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    public enum GenresEnum
+    public enum Genres
     {
         Business,
         Hobby,
