@@ -2,7 +2,7 @@
 {
     using System;
 
-    public abstract class Profile
+    public abstract class Profile : IProfile
     {
         private string name;
         private string password;
@@ -22,7 +22,6 @@
         public string Password
         {
             set { this.password = value; }
-        }
-
+        }        
     }
 }

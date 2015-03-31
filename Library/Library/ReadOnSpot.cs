@@ -2,7 +2,7 @@
 {
     using System;
 
-    public abstract class ReadOnSpot : ReadbleItem
+    public abstract class ReadOnSpot : ReadableItem
     {
         public DateTime CurrentDate { get; set; }
         public bool TakenItemsFromLibrary { get; set; }

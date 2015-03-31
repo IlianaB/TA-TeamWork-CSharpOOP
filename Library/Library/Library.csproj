@@ -45,16 +45,27 @@
     <Compile Include="Book.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Genres.cs" />
+    <Compile Include="IAdmin.cs" />
+    <Compile Include="IModerator.cs" />
+    <Compile Include="IProfile.cs" />
+    <Compile Include="IReadable.cs" />
+    <Compile Include="IRegularUser.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Magazine.cs" />
     <Compile Include="Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
+<<<<<<< HEAD
     <Compile Include="Rating.cs" />
     <Compile Include="ReadbleItem.cs" />
+=======
+    <Compile Include="ReadableItem.cs" />
+>>>>>>> 3b2f70661af02d7610c4f777f3f9506ee44d7fe0
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TakeAway.cs" />
     <Compile Include="Profile.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
