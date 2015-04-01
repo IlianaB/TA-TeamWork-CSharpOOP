@@ -54,12 +54,8 @@
     <Compile Include="Magazine.cs" />
     <Compile Include="Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
-<<<<<<< HEAD
     <Compile Include="Rating.cs" />
     <Compile Include="ReadbleItem.cs" />
-=======
-    <Compile Include="ReadableItem.cs" />
->>>>>>> 3b2f70661af02d7610c4f777f3f9506ee44d7fe0
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
