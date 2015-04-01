@@ -55,7 +55,7 @@
     <Compile Include="Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
     <Compile Include="Rating.cs" />
-    <Compile Include="ReadbleItem.cs" />
+    <Compile Include="ReadableItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
