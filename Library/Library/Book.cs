@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    public class Book : TakeAway
+    public class Book //: TakeAway
     {
         private string author;
         private Genres genre;

@@ -1,11 +1,12 @@
 ﻿namespace Library
 {
     using System;
+    using System.Collections.Generic;
 
     public interface IUser : IProfile
     {
-        string CurrentReadBook { get; set; }
-        string ReadBook { get; set; }
-        string WishedBook { get; set; }
+        IEnumerable<IReadable> ReadItems { get; set; }
+        IEnumerable<IReadable> CurrentlyReadItems { get; set; }
+        IEnumerable<IReadable> WishedToReadItems { get; set; }
     }
 }

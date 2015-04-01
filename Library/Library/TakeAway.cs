@@ -8,5 +8,10 @@
         public DateTime DateReturned { get; protected set; }
         public int TotalDaysKeptItem { get; set; }
 
+        public TakeAway(string name, string publisher, int year) 
+            :base(name, publisher, year)
+        {
+        }
+
     }
 }

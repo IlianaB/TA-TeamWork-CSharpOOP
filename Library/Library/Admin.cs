@@ -25,9 +25,9 @@
 
         public void AddBook(string name, string author, Genres genre)
         {
-            Book book = new Book();
-            book.Author = author;
-            book.Name = name;
+            //Book book = new Book();
+            //book.Author = author;
+            //book.Name = name;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    public class Newspaper: ReadOnSpot
+    public class Newspaper//: ReadOnSpot
     {
         private string issue;
 
