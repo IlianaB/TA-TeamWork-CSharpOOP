@@ -5,9 +5,10 @@
 
     public abstract class User : Profile, IUser
     {
-        public IEnumerable<IReadable> ReadItems { get; set; }
-        public IEnumerable<IReadable> CurrentlyReadItems { get; set; }
-        public IEnumerable<IReadable> WishedToReadItems { get; set; }
+
+        public ICollection<IReadable> ReadItems { get; set; }
+        public ICollection<IReadable> CurrentlyReadItems { get; set; }
+        public ICollection<IReadable> WishedToReadItems { get; set; }
 
         public User(string name, string password) 
             :base(name, password)
@@ -17,6 +18,16 @@
             this.WishedToReadItems = new List<IReadable>();
         }
 
-
+        public void AddReadItem(ReadableItem readableItem)
+        {
+            if (this.ReadItems.Contains(readableItem))
+            {
+                throw new ArgumentException();
+            }
+            else
+            {
+                this.ReadItems.Add(readableItem);
+            }            
+        }
     }
 }

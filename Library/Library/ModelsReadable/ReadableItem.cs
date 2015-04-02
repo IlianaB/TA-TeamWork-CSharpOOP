@@ -50,6 +50,10 @@
             { 
                 return new List<Comment>(this.comment); 
             }            
-        } 
+        }
+
+        //TODO
+        public abstract string DisplaReadableInformation();
+        
     }
 }
