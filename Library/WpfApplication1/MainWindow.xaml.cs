@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Library;
 
 namespace WpfApplication1
 {
@@ -23,6 +24,40 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Login.Init(this.Username.Text, this.Password.Password);
+            }
+            catch (Exception exeption)
+            {
+                MessageBox.Show(exeption.Message);
+                return;
+            }
+            var o = new UserPanel();
+            o.Show();
+            this.Close();
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e) //TODO add more validations
+        {
+            if (this.RegisterPassword.Password == this.RePassword.Password)//check passwords 
+            {
+                if (!FileManager.UserExist(RegisterUsername.Text))
+                {
+                    FileManager.CreateUserFile(RegisterUsername.Text, RegisterPassword.Password);
+                }
+                else
+                {
+                    MessageBox.Show("Username already exist!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Passwords does not match!");
+            }
         }
     }
 }

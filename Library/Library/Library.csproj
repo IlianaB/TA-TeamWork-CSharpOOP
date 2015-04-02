@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exception\LibraryException.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsReadable\Book.cs" />
     <Compile Include="CommonModels\Comment.cs" />
