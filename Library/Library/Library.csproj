@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsReadable\Book.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="Genres.cs" />
+    <Compile Include="CommonModels\Comment.cs" />
+    <Compile Include="CommonModels\Genres.cs" />
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IModerator.cs" />
     <Compile Include="Interfaces\IProfile.cs" />
@@ -54,8 +54,8 @@
     <Compile Include="ModelsReadable\Magazine.cs" />
     <Compile Include="ModelsProfile\Moderator.cs" />
     <Compile Include="ModelsReadable\Newspaper.cs" />
-    <Compile Include="ProfileType.cs" />
-    <Compile Include="Rating.cs" />
+    <Compile Include="CommonModels\ProfileType.cs" />
+    <Compile Include="CommonModels\Rating.cs" />
     <Compile Include="ModelsReadable\ReadableItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
     <Compile Include="ModelsProfile\RegularUser.cs" />
