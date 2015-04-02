@@ -8,19 +8,15 @@ namespace Library
 {
     public class Moderator : User, IModerator
     {
+        public Moderator(string name, string password) 
+            : base(name, password)
+        {
+
+        }
+
         public void RemoveComment()
         {
             throw new NotImplementedException();
-        }
-        
-        public string Name
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public string Password
-        {
-            set { throw new NotImplementedException(); }
         }
     }
 }

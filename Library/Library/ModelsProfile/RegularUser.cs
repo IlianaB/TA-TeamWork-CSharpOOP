@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class RegularUser : User, IRegularUser
+    public class RegularUser : User //IRegularUser
     {
-        
-        public string Name
+        public RegularUser(string name, string password) 
+            : base(name, password)
         {
-            get { throw new NotImplementedException(); }
-        }
 
-        public string Password
-        {
-            set { throw new NotImplementedException(); }
         }
-
-        
     }
 }

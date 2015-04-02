@@ -1,28 +1,19 @@
 ﻿namespace Library
 {
-    public class Book //: TakeAway
+    public class Book : ReadableItem
     {
         private string author;
-        private Genres genre;
 
-        public Book()
+        public Book(string name, string publisher, int year, Genres genre, string author) 
+            : base(name, publisher, year, genre)
         {
-
-        }
+            this.Author = author;
+        }   
 
         public string Author
         {
             get { return this.author; }
             set { this.author = value; }
-        }
-
-        public Genres Genre
-        {
-            get { return this.genre; }
-            set { this.genre = value; }
-        }
-
-
-
+        } 
     }
 }
