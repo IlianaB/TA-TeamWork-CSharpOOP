@@ -41,29 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="Book.cs" />
+    <Compile Include="ModelsProfile\Admin.cs" />
+    <Compile Include="ModelsReadable\Book.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Genres.cs" />
-    <Compile Include="IAdmin.cs" />
-    <Compile Include="IModerator.cs" />
-    <Compile Include="IProfile.cs" />
-    <Compile Include="IReadable.cs" />
-    <Compile Include="IRegularUser.cs" />
-    <Compile Include="IUser.cs" />
-    <Compile Include="Magazine.cs" />
-    <Compile Include="Moderator.cs" />
-    <Compile Include="Newspaper.cs" />
+    <Compile Include="Interfaces\IAdmin.cs" />
+    <Compile Include="Interfaces\IModerator.cs" />
+    <Compile Include="Interfaces\IProfile.cs" />
+    <Compile Include="Interfaces\IReadable.cs" />
+    <Compile Include="Interfaces\IRegularUser.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="ModelsReadable\Magazine.cs" />
+    <Compile Include="ModelsProfile\Moderator.cs" />
+    <Compile Include="ModelsReadable\Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
     <Compile Include="Rating.cs" />
-    <Compile Include="ReadableItem.cs" />
+    <Compile Include="ModelsReadable\ReadableItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
-    <Compile Include="RegularUser.cs" />
+    <Compile Include="ModelsProfile\RegularUser.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TakeAway.cs" />
-    <Compile Include="Profile.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="ModelsProfile\Profile.cs" />
+    <Compile Include="ModelsProfile\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
