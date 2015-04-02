@@ -52,11 +52,13 @@
     <Compile Include="IRegularUser.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Magazine.cs" />
+    <Compile Include="Moderator.cs" />
     <Compile Include="Newspaper.cs" />
     <Compile Include="ProfileType.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="ReadableItem.cs" />
     <Compile Include="ReadOnSpot.cs" />
+    <Compile Include="RegularUser.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TakeAway.cs" />
