@@ -3,31 +3,19 @@
 
     public class Admin : Profile, IAdmin
     {
-        private ProfileType profileType;
-
         public Admin(string name, string password) 
-            :base(name, password)
+            :base(name, password, ProfileType.Administrator)
         {
-            this.ProfileType = ProfileType.Administrator;
         }
-
-        public ProfileType ProfileType
-        {
-            get { return this.profileType; }
-            set { this.profileType = value; }
-        }
-
 
         public void AddReadableItem(IReadable readable)
         {
             throw new System.NotImplementedException();
         }        
 
-        public void AddBook(string name, string author, Genres genre)
+        public void RemoveReadableItem(IReadable readable)
         {
-            //Book book = new Book();
-            //book.Author = author;
-            //book.Name = name;
+            throw new System.NotImplementedException();
         }
     }
 }

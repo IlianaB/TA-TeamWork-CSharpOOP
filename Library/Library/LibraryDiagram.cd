@@ -3,22 +3,22 @@
   <Class Name="Library.Book" Collapsed="true">
     <Position X="5.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAIAAIACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Book.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsReadable\Book.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Library.Magazine" Collapsed="true">
     <Position X="10.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Magazine.cs</FileName>
+      <FileName>ModelsReadable\Magazine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Library.Newspaper" Collapsed="true">
     <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Newspaper.cs</FileName>
+      <FileName>ModelsReadable\Newspaper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Library.ReadbleItem" Collapsed="true">
@@ -28,13 +28,6 @@
       <FileName>ReadbleItem.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Library.ReadOnSpot" Collapsed="true">
-    <Position X="9" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAQAAAAA=</HashCode>
-      <FileName>ReadOnSpot.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Library.Start" Collapsed="true">
     <Position X="14.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -42,25 +35,19 @@
       <FileName>Start.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Library.TakeAway" Collapsed="true">
-    <Position X="5.75" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAIA=</HashCode>
-      <FileName>TakeAway.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Library.Admin" Collapsed="true">
     <Position X="12.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAACAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Admin.cs</FileName>
+      <HashCode>CAAAAAAAAAAAAAAAACAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsProfile\Admin.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Enum Name="Library.Genres" Collapsed="true">
     <Position X="12.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAABAEAAABAAAAgQAAAAAAAAAAQAAAgAgAACAAA=</HashCode>
-      <FileName>Genres.cs</FileName>
+      <FileName>CommonModels\Genres.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

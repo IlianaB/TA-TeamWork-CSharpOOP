@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Library
+﻿namespace Library
 {
+    using System;
+
     public class Moderator : User, IModerator
     {
         public Moderator(string name, string password) 
-            : base(name, password)
+            : base(name, password, ProfileType.Moderator)
         {
-
         }
 
         public void RemoveComment()

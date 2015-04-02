@@ -5,7 +5,6 @@
     public enum ProfileType
     {
         Administrator,
-        User,
         Moderator,
         RegularUser
     }

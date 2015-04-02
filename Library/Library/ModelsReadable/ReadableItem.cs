@@ -7,41 +7,42 @@
         private string name;
         private string publisher;
         private int year;
-        private Rating rating;
         private Genres genre;
+        private Rating rating;
         private IEnumerable<Comment> comment;
 
-        public ReadableItem(string name, string publisher, int year, Genres genre)
+        public ReadableItem(string name, string publisher, int year, Genres genre, Rating rating)
         {
             this.Name = name;
             this.Publisher = publisher;
             this.Year = year;
             this.Genre = genre;
+            this.rating = rating;
             this.comment = new List<Comment>();
         }
 
         public string Name
         {
             get { return this.name; }
-            set { this.name = value; }
+            private set { this.name = value; }
         }
 
         public string Publisher
         {
             get { return this.publisher; }
-            set { this.publisher = value; }
+            private set { this.publisher = value; }
         }
 
         public int Year
         {
             get { return this.year; }
-            set { this.year = value; }
+            private set { this.year = value; }
         }
 
         public Genres Genre
         {
             get { return this.genre; }
-            set { this.genre = value; }
+            private set { this.genre = value; }
         }
 
         public IEnumerable<Comment> Comment
@@ -53,7 +54,7 @@
         }
 
         //TODO
-        public abstract string DisplaReadableInformation();
+        //public abstract string DisplayReadableInformation();
         
     }
 }

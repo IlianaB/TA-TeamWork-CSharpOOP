@@ -4,8 +4,8 @@
     {
         private string author;
 
-        public Book(string name, string publisher, int year, Genres genre, string author) 
-            : base(name, publisher, year, genre)
+        public Book(string name, string publisher, int year, Genres genre, Rating rating, string author) 
+            : base(name, publisher, year, genre, rating)
         {
             this.Author = author;
         }   
@@ -13,7 +13,7 @@
         public string Author
         {
             get { return this.author; }
-            set { this.author = value; }
+            private set { this.author = value; }
         } 
     }
 }

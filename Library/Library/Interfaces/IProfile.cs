@@ -5,8 +5,7 @@
     public interface IProfile
     {
         string Name { get; }
-
-        string Password { set;  }
+        string Password { set; }
 
     }
 }
