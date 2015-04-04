@@ -3,22 +3,32 @@
     using System;
     using System.Collections.Generic;
 
-    public abstract class Library
+    public sealed class Library
     {
         private const string ExceptionMessageIfReadableItemIsAlreadyInTheLibrary = "This item is already in this database!";
         private const string ExceptionMessageIfReadableItemIsNotInTheLibrary = "This item is not in this database!";
         private const string ExceptionMessageIfUserIsAlreadyInTheLibrary = "This user is already in this database!";
 
-        // Lets try using HashSet because we can keep only unique elements
+        //Creating single instance
+        private static readonly Library SingleInstance = new Library("Online library");
+
         private string name;
-        private HashSet<ReadableItem> readableItems;
-        private HashSet<User> users;  // dont know what to use User or Profile
+        private ICollection<IReadable> readableItems;
+        private ICollection<IProfile> users;  
 
         public Library(string name)
         {
             this.Name = name;
-            this.readableItems = new HashSet<ReadableItem>();
-            this.users = new HashSet<User>();
+            this.readableItems = new List<IReadable>();
+            this.users = new List<IProfile>();
+        }
+
+        public static Library Instance
+        {
+            get
+            {
+                return SingleInstance;
+            }
         }
 
         public string Name
@@ -35,36 +45,35 @@
             }
         }
 
-        private HashSet<ReadableItem> ReadableItems
+        public ICollection<IReadable> ReadableItems
         {
             get
             {
-                return new HashSet<ReadableItem>(this.readableItems);
+                return new List<IReadable>(this.readableItems);
             }
         }
 
-        private HashSet<User> Users
+        public ICollection<IProfile> Users
         {
             get
             {
-                return new HashSet<User>(this.users);
+                return new List<IProfile>(this.users);
             }
         }
 
-        public void AddReadableItem(ReadableItem readable)
+        public void AddReadableItem(IReadable readable)
         {
             if (this.readableItems.Contains(readable))
             {
                 throw new ArgumentException(ExceptionMessageIfReadableItemIsAlreadyInTheLibrary);
             }
-
             else
             {
                 this.readableItems.Add(readable);
             }
         }
 
-        public void RemoveReadableItem(ReadableItem readable)
+        public void RemoveReadableItem(IReadable readable)
         {
             if (!this.readableItems.Contains(readable))
             {
@@ -77,7 +86,7 @@
             }
         }
 
-        public void AddUser(User user)
+        public void AddUser(IProfile user)
         {
             if (this.users.Contains(user))
             {

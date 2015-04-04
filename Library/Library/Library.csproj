@@ -60,7 +60,7 @@
     <Compile Include="CommonModels\Rating.cs" />
     <Compile Include="ModelsReadable\ReadableItem.cs" />
     <Compile Include="ModelsProfile\RegularUser.cs" />
-    <Compile Include="Search.cs" />
+    <Compile Include="CommonModels\Search.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModelsProfile\Profile.cs" />
