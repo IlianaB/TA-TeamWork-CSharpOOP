@@ -9,7 +9,7 @@ namespace Library
 {
     sealed class FileManager
     {
-        public static Uri DatabasePath = new Uri(@"Database", UriKind.RelativeOrAbsolute);
+        public static Uri DatabasePath = new Uri(@"../Library/Database", UriKind.RelativeOrAbsolute);
         public static Uri UsersPath = new Uri(string.Format(@"../../{0}\Users", DatabasePath), UriKind.RelativeOrAbsolute);
         public static Uri BooksPath = new Uri(string.Format(@"../../{0}\Books", DatabasePath), UriKind.RelativeOrAbsolute);
 
