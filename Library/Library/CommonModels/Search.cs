@@ -18,7 +18,7 @@
 
             foreach (var readable in Library.Instance.ReadableItems)
             {
-                if (readable.Name == keyword)
+                if (readable.Name.ToLower().Contains(keyword.ToLower()))
                 {
                     searchResult.Add(readable);
                 }
