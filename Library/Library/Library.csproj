@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exception\LibraryException.cs" />
+    <Compile Include="Factories\ProfilesFactory.cs" />
+    <Compile Include="Factories\ReadableItemsFactory.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsReadable\Book.cs" />
@@ -73,7 +75,6 @@
   <ItemGroup>
     <Folder Include="Database\Books\" />
     <Folder Include="Database\Users\" />
-    <Folder Include="Factories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
