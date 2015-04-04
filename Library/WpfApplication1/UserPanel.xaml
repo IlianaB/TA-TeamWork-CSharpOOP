@@ -44,7 +44,7 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Row="0">
+                        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" >
                             <TextBlock Margin="20,10,0,0" FontSize="30" Text="{Binding Path=Name}"></TextBlock>
                             <TextBlock Margin="10,0,0,0" FontSize="15" Text="{Binding Path=Author}"></TextBlock>
                             <StackPanel Orientation="Horizontal">

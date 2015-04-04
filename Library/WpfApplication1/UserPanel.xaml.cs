@@ -107,7 +107,7 @@ namespace WpfApplication1
             {
                 return new List<Book>
                 {
-                    new Book("Book1","Author6781","wtfis that aaaa"),
+                    new Book("Book1Book1Book1Book1Bo","Author6781","wtfis that aaaa"),
                     new Book("Book21","Author111","wtfis that aaaa"),
                     new Book("Book231","Author51","wtfis that aaaa"),
                     new Book("Book11","Author21","wtfis that aaaa"),
