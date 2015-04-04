@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exception\LibraryException.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsReadable\Book.cs" />
     <Compile Include="CommonModels\Comment.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="CommonModels\Rating.cs" />
     <Compile Include="ModelsReadable\ReadableItem.cs" />
     <Compile Include="ModelsProfile\RegularUser.cs" />
+    <Compile Include="Search.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModelsProfile\Profile.cs" />
