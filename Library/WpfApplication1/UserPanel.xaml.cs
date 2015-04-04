@@ -20,16 +20,41 @@ namespace WpfApplication1
     /// </summary>
     public partial class UserPanel : Window
     {
+        private ICollectionView books = CollectionViewSource.GetDefaultView(new myView().Books);
+        private ICollectionView users = CollectionViewSource.GetDefaultView(new myView().Users);
+        
+
         public UserPanel()
         {
             InitializeComponent();
-        }
-        private void OnUserPanel_Loaded(object sender, RoutedEventArgs e)
-        {
-            ICollectionView books = CollectionViewSource.GetDefaultView(new myView().Books);
-            ICollectionView users = CollectionViewSource.GetDefaultView(new myView().Users);
-            //ICollectionView books = CollectionViewSource.GetDefaultView(new myView().Users);
             DataContext = books;
+        }
+        
+        private void OnNext_Click(object sender, RoutedEventArgs e)
+        {
+            books.MoveCurrentToNext();
+            if (books.IsCurrentAfterLast)
+            {
+                books.MoveCurrentToFirst();
+            }
+        }
+        private void OnPrevious_Click(object sender, RoutedEventArgs e)
+        {
+            books.MoveCurrentToPrevious();
+            if (books.IsCurrentBeforeFirst)
+            {
+                books.MoveCurrentToLast();
+            }
+        }
+
+        private void OnLibraryTab_GotFocus(object sender, RoutedEventArgs e)
+        {
+            DataContext = books;
+        }
+
+        private void OnFriendsTab_GotFocus(object sender, RoutedEventArgs e)
+        {
+            DataContext = users;
         }
 
 

@@ -5,11 +5,10 @@
         Height="500" 
         Width="700" 
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen"
-        Loaded="OnUserPanel_Loaded">
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl>
-            <TabItem>
+        <TabItem GotFocus="OnLibraryTab_GotFocus">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <Image 
@@ -53,12 +52,12 @@
                                 <TextBlock VerticalAlignment="Center" Text="{Binding Path=Phone}"></TextBlock>
                             </StackPanel>
                         </StackPanel>
-                        <Button Content="Previus" Grid.Row="1"></Button>
-                        <Button Content="Next" Grid.Row="1" Grid.Column="1"></Button>
+                        <Button Content="Previous" Grid.Row="1" Click="OnPrevious_Click"></Button>
+                        <Button Content="Next" Grid.Row="1" Grid.Column="1" Click="OnNext_Click"></Button>
                     </Grid>
                 </Grid>
             </TabItem>
-            <TabItem>
+            <TabItem GotFocus="OnFriendsTab_GotFocus">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <Image 
