@@ -48,6 +48,10 @@ namespace WpfApplication1
                 if (!FileManager.UserExist(RegisterUsername.Text))
                 {
                     FileManager.CreateUserFile(RegisterUsername.Text, RegisterPassword.Password);
+                    MessageBox.Show("Registration successful.");
+                    RegisterPassword.Clear();
+                    RePassword.Clear();
+                    RegisterUsername.Clear();
                 }
                 else
                 {
