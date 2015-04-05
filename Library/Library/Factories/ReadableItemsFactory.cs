@@ -2,34 +2,27 @@
 {
     using System;
 
-    public static class ReadableItemsFactory
+    public class ReadableItemsFactory : IReadableItemsFactory
     {
         //TODO!!!
         //Constructors with Comments
-        //Working with interfaces as return types, when they are added
 
-        public static Book CreateBook(string name, string publisher, int year, string stringGenre, string author)
+        public IReadable CreateReadableItem(string itemType, string name, string publisher, int year, string stringGenre, 
+                                            string authorOrIssue, int counter = 0, int totalRatings = 0, int averageRating = 0)
         {
             Genres genre = GetGenre(stringGenre);
-            Rating rating = new Rating();
+            Rating rating = new Rating(counter, totalRatings, averageRating);
 
-            return new Book(name, publisher, year, genre, rating, author);
-        }
-
-        public static Magazine CreateMagazine(string name, string publisher, int year, string stringGenre, string issue)
-        {
-            Genres genre = GetGenre(stringGenre);
-            Rating rating = new Rating();
-
-            return new Magazine(name, publisher, year, genre, rating, issue);
-        }
-
-        public static Newspaper CreateNewspaper(string name, string publisher, int year, string stringGenre, string issue)
-        {
-            Genres genre = GetGenre(stringGenre);
-            Rating rating = new Rating();
-
-            return new Newspaper(name, publisher, year, genre, rating, issue);
+            switch (itemType)
+            {
+                case "Book":
+                    return new Book(name, publisher, year, genre, rating, authorOrIssue);
+                case "Magazine":
+                    return new Magazine(name, publisher, year, genre, rating, authorOrIssue);
+                case "Newspaper":
+                    return new Newspaper(name, publisher, year, genre, rating, authorOrIssue);
+                default: throw new ArgumentException("You must specify what kind of readable item you want to create!");
+            }
         }
 
         private static Genres GetGenre(string genre)

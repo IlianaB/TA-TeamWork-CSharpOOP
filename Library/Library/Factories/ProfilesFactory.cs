@@ -1,20 +1,22 @@
 ﻿namespace Library
 {
-    public static class ProfilesFactory
+    using System;
+
+    public class ProfilesFactory : IProfilesFactory
     {
-        public static IAdmin CreateAdmin(string name, string password)
+        public IProfile CreateProfile(string profileType, string name, string password)
         {
-            return new Admin(name, password);
-        }
-
-        public static IModerator CreateModerator(string name, string password)
-        {
-            return new Moderator(name, password);
-        }
-
-        public static IRegularUser CreateRegularUser(string name, string password)
-        {
-           return new RegularUser(name, password);
+            switch (profileType)
+            {
+                case "Admin":
+                    return new Admin(name, password);
+                case "Moderator":
+                    return new Moderator(name, password);
+                case "RegularUser":
+                    return new RegularUser(name, password);
+                default: 
+                    throw new ArgumentException("You must specify a profile type!");
+            }
         }
     }
 }

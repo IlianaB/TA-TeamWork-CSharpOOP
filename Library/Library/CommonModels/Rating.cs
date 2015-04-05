@@ -2,6 +2,16 @@
 {
     public struct Rating
     {
+        private double averageRating;
+        
+        public Rating(int counter = 0, int totalRatings = 0, double averageRating = 0) 
+            :this()
+        {
+            this.AverageRating = averageRating;
+            this.Counter = counter;
+            this.TotalRatings = totalRatings;
+        }
+
         public int Counter { get; private set; }
         public int TotalRatings { get; private set; }
 
@@ -10,6 +20,10 @@
             get
             {
                 return (double)this.TotalRatings / this.Counter;
+            }
+            private set
+            {
+                this.averageRating = value;
             }
         }
 

@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Factories\ProfilesFactory.cs" />
     <Compile Include="Factories\ReadableItemsFactory.cs" />
+    <Compile Include="Interfaces\IProfilesFactory.cs" />
+    <Compile Include="Interfaces\IReadableItemsFactory.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="Exception\LibraryItemException.cs" />
     <Compile Include="Exception\LibraryUserException.cs" />
