@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception\LibraryException.cs" />
     <Compile Include="Factories\ProfilesFactory.cs" />
     <Compile Include="Factories\ReadableItemsFactory.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="Exception\LibraryItemException.cs" />
+    <Compile Include="Exception\LibraryUserException.cs" />
+    <Compile Include="Exception\LoginFailedException.cs" />
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsReadable\Book.cs" />
     <Compile Include="CommonModels\Comment.cs" />
