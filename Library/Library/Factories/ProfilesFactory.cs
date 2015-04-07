@@ -15,16 +15,33 @@
             {
                 case "administrator":
                     var profileAdmin = new Admin(name, password);
-                    Library.Instance.dataManager.SerializeProfiles(profileAdmin);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(profileAdmin))
+                    {
+                        Library.Instance.dataManager.SerializeProfiles(profileAdmin);
+                    }
+
                     return profileAdmin;
                 case "moderator":
                     var profileMod = new Moderator(name, password);
-                    Library.Instance.dataManager.SerializeProfiles(profileMod);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(profileMod))
+                    {
+                        Library.Instance.dataManager.SerializeProfiles(profileMod);
+                    }
+
                     return profileMod;
+
                 case "regularuser":
                     var profileUser = new Moderator(name, password);
-                    Library.Instance.dataManager.SerializeProfiles(profileUser);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(profileUser))
+                    {
+                        Library.Instance.dataManager.SerializeProfiles(profileUser);
+                    }
+
                     return profileUser;
+
                 default:
                     throw new ArgumentException("You must specify a profile type!");
             }

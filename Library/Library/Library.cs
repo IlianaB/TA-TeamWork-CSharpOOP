@@ -141,5 +141,31 @@
                 this.AddUser(profile);
             }
         }
+
+        public bool isAlreadyInTheLibrary(IProfile profile)
+        {
+            foreach (var profileItem in Library.Instance.Users)
+            {
+                if (profile.Name == profileItem.Name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool isAlreadyInTheLibrary(IReadable readableItem)
+        {
+            foreach (var readable in Library.Instance.ReadableItems)
+            {
+                if (readable.Name == readableItem.Name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

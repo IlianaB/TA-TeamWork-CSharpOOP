@@ -23,16 +23,32 @@
             {
                 case "Book":
                     var book = new Book(name, publisher, year, genre, rating, authorOrIssue);
-                    Library.Instance.dataManager.SerializeReadables(book);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(book))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(book);
+                    }
+
                     return book;
                 case "Magazine":
                     var magazine = new Magazine(name, publisher, year, genre, rating, authorOrIssue);
-                    Library.Instance.dataManager.SerializeReadables(magazine);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(magazine))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(magazine);
+                    }
+
                     return magazine;
                 case "Newspaper":
                     var newspaper = new Newspaper(name, publisher, year, genre, rating, authorOrIssue);
-                    Library.Instance.dataManager.SerializeReadables(newspaper);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(newspaper))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(newspaper);
+                    }
+
                     return newspaper;
+
                 default: throw new ArgumentException("You must specify what kind of readable item you want to create!");
             }
         }
