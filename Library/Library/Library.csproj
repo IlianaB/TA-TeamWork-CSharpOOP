@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonModels\DataManager.cs" />
+    <Compile Include="Exception\LibraryCommonException.cs" />
     <Compile Include="Factories\ProfilesFactory.cs" />
     <Compile Include="Factories\ReadableItemsFactory.cs" />
     <Compile Include="Interfaces\IProfilesFactory.cs" />
