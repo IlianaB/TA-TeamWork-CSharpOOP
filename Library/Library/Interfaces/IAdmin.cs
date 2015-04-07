@@ -4,7 +4,7 @@
 
     public interface IAdmin : IProfile
     {
-        void SendToLibrary(IReadable readable);
+        void SendToLibrary(string[] data);
         void RemoveFromLibrary(IReadable readable);
     }
 }

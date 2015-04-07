@@ -109,6 +109,42 @@
                         <!--<TextBlock Text ="Library" Margin="2,0,0,0" VerticalAlignment="Center"/>-->
                     </StackPanel>
                 </TabItem.Header>
+                <Grid >
+                    <StackPanel Grid.Column="0">
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Type:</Label>
+                            <TextBox Name="Type" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Name:</Label>
+                            <TextBox Name="Name" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Publisher:</Label>
+                            <TextBox Name="Publisher" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Year:</Label>
+                            <TextBox Name="Year" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Genre:</Label>
+                            <TextBox Name="Genre" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <Label VerticalAlignment="Center" Width="110" FontSize="18">Author:</Label>
+                            <TextBox Name="Author" Width="230" FontSize="18"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="112,20,-112,5">
+                            <Button x:Name="Add_Item" Width="230" FontSize="18" Content="Add Item" Click="Add_Item_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
