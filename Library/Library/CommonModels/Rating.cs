@@ -29,8 +29,13 @@
 
         public void ChangeRating(int userRating)
         {
+            if (userRating < 0 || userRating > 5)
+            {
+                throw new LibraryCommonException(LibraryCommonException.ExceptionMessageForRatingPoints);                
+            }
             this.IncreaseCounter();
             this.IncreaseTotalRatings(userRating);
+            
         }
 
         private void IncreaseCounter()

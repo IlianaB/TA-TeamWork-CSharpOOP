@@ -1,17 +1,15 @@
 ﻿namespace Library
-{
+{    
     using System;
     using System.Collections.Generic;
 
     public class Search
-    {
-        private const string ExceptionMessageForKeywordsLength = "Keyword cannot be less than 3 symbols";
-
+    {        
         public ICollection<IReadable> SearchReadableItem(string keyword)
         {
             if (keyword.Length < 3)
             {
-                throw new ArgumentOutOfRangeException(ExceptionMessageForKeywordsLength);
+                throw new LibraryCommonException(LibraryCommonException.ExceptionMessageForKeywordsLength);
             }
 
             var searchResult = new List<IReadable>();
@@ -25,7 +23,6 @@
             }
 
             return searchResult;
-
         }
     }
 }
