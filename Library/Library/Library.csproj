@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonModels\DataManager.cs" />
     <Compile Include="Factories\ProfilesFactory.cs" />
     <Compile Include="Factories\ReadableItemsFactory.cs" />
     <Compile Include="Interfaces\IProfilesFactory.cs" />

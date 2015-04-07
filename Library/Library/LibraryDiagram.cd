@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Library.Start" Collapsed="true">
-    <Position X="14.5" Y="0.75" Width="1.5" />
+    <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Start.cs</FileName>
@@ -64,7 +64,7 @@
   <Class Name="Library.RegularUser" Collapsed="true">
     <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>ModelsProfile\RegularUser.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -72,7 +72,7 @@
   <Class Name="Library.User" Collapsed="true">
     <Position X="1.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAYAQAAAAAQASAAAAAAADAAAAAEAICAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAQAQAAGAAAAQAAABAAACAAAAAEIICAAAAAAA=</HashCode>
       <FileName>ModelsProfile\User.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -106,21 +106,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Library.Exception.LibraryItemException" Collapsed="true">
+  <Class Name="Library.LibraryItemException" Collapsed="true">
     <Position X="14.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAACAAAAAACAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Exception\LibraryItemException.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Library.Exception.LibraryUserException" Collapsed="true">
+  <Class Name="Library.LibraryUserException" Collapsed="true">
     <Position X="16" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQCAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Exception\LibraryUserException.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Library.Exception.LoginFailedException" Collapsed="true">
+  <Class Name="Library.LoginFailedException" Collapsed="true">
     <Position X="12.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAg=</HashCode>
@@ -179,7 +179,7 @@
   <Interface Name="Library.IRegularUser" Collapsed="true">
     <Position X="7.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IRegularUser.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -193,7 +193,7 @@
   <Enum Name="Library.Genres" Collapsed="true">
     <Position X="12.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAABAEAAABAAAAgQAAAAAAAAAAQAAAgAgAACAAA=</HashCode>
+      <HashCode>ABAAEAAAAEAAABAAAAgAAAAAAAAAAAQAAAgCgAACAAA=</HashCode>
       <FileName>CommonModels\Genres.cs</FileName>
     </TypeIdentifier>
   </Enum>

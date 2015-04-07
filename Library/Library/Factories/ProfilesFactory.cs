@@ -1,6 +1,7 @@
 ﻿namespace Library
 {
     using System;
+    using System.Collections.Generic;
 
     public class ProfilesFactory : IProfilesFactory
     {

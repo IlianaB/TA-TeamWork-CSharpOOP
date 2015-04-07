@@ -14,13 +14,22 @@
 
         private string name;
         private ICollection<IReadable> readableItems;
-        private ICollection<IProfile> users;  
+        private ICollection<IProfile> users;
+
+        public readonly ProfilesFactory profilesFactory;
+        public readonly ReadableItemsFactory readableItemsFactory;
+        public readonly Search search;
+        public readonly DataManager dataManager;
 
         public Library(string name)
         {
             this.Name = name;
             this.readableItems = new List<IReadable>();
             this.users = new List<IProfile>();
+            this.profilesFactory = new ProfilesFactory();
+            this.readableItemsFactory = new ReadableItemsFactory();
+            this.search = new Search();
+            this.dataManager = new DataManager();
         }
 
         public static Library Instance
@@ -99,27 +108,38 @@
             }
         }
 
-         public void InitializeReadableItems()
-         {
-             //Receive string array from file manager
-             //Return arraywith objects
-         }
+        public void Start()
+        {
+            this.InitializeProfiles();
+            this.InitializeReadableItems();
 
-         public void InitializeProfiles()
-         { 
-             //Receive string array from file manager
-             //Return array with oobjects
-         }
+            //var currentUser = new Profile(name, password, profileType);
+        }
 
-         public void Start()
-         {
-             ProfilesFactory profilesFactory = new ProfilesFactory();
-             ReadableItemsFactory readableItemsFactory = new ReadableItemsFactory();
-             Search search = new Search();
-             this.InitializeProfiles();
-             this.InitializeReadableItems();
+        public void InitializeReadableItems()
+        {
+            var allReadables = dataManager.ReadReadables();
 
-             //var currentUser = new Profile(name, password, profileType);
-         }
+            foreach (var line in allReadables)
+            {
+                string[] data = new string[9];
+                data = line.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+                var readableItem = readableItemsFactory.CreateReadableItem(data);
+                this.AddReadableItem(readableItem);
+            }
+        }
+
+        public void InitializeProfiles()
+        {
+            var allProfiles = dataManager.ReadProfiles();
+
+            foreach (var line in allProfiles)
+            {
+                string[] data = new string[3];
+                data = line.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+                var profile = profilesFactory.CreateProfile(data);
+                this.AddUser(profile);
+            }
+        }
     }
 }
