@@ -9,8 +9,8 @@
         MainstreamMedia,
         Autobiography,
         TextBook,
-        Prgramming,
-        Animals,
+        Programming,
+        Adults,
         ManMadeMarvels
     }
 }

@@ -103,7 +103,6 @@
          {
              //Receive string array from file manager
              //Return arraywith objects
-
          }
 
          public void InitializeProfiles()

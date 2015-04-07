@@ -51,16 +51,14 @@
                     return Genres.Autobiography;
                 case "TextBook":
                     return Genres.TextBook;
-                case "Prgramming":
-                    return Genres.Prgramming;
-                case "Animals":
-                    return Genres.Animals;
+                case "Programming":
+                    return Genres.Programming;
+                case "Adults":
+                    return Genres.Adults;
                 case "ManMadeMarvels":
                     return Genres.MainstreamMedia;
                 default:
-                    //TODO!!!
-                    //throw custom Exception
-                    throw new ArgumentException();
+                    throw new LibraryItemException(LibraryItemException.InvalidGenreException);
             }
         }
     }
