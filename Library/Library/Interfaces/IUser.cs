@@ -6,7 +6,9 @@
     public interface IUser : IProfile
     {
         ICollection<IReadable> ReadItems { get; }
+
         ICollection<IReadable> CurrentlyReadItems { get; }
+
         ICollection<IReadable> WishedToReadItems { get; }
 
         void AddToCurrentReadable(IReadable readable);
