@@ -18,7 +18,7 @@
                 case "moderator":
                     return new Moderator(name, password);
                 case "regularuser":
-                    return new Moderator(name, password);
+                    return new RegularUser(name, password);
                 default:
                     throw new LibraryCommonException(LibraryCommonException.PofileTypeExceptionMessage);
             }

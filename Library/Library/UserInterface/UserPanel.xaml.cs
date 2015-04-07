@@ -71,5 +71,30 @@ namespace UserInterface
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Add_Item_Click(object sender, RoutedEventArgs e)
+        {
+            string[] data = { this.Type.Text, this.Name.Text, this.Publisher.Text, this.Year.Text, this.Genre.Text, "1", "0", "0", this.Author.Text };
+
+            foreach (var currUser in Library.Library.Instance.Users)
+            {
+                if (currUser is Library.Admin)
+                {
+                    try
+                    {
+                        (currUser as Library.Admin).SendToLibrary(data);
+
+                        MessageBox.Show("You have successfully added the new ReadableItem to the Library!");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please fill all textboxes!");
+                    }
+                    
+                }
+            }
+
+            books = CollectionViewSource.GetDefaultView(Library.Library.Instance.ReadableItems);
+        }
     }
 }

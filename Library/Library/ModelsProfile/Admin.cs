@@ -8,8 +8,9 @@
         {
         }
 
-        public void SendToLibrary(IReadable readable)
+        public void SendToLibrary(string[] data)
         {
+            var readable = Library.Instance.readableItemsFactory.CreateReadableItem(data);
             Library.Instance.SaveReadableItem(readable);
             Library.Instance.AddReadableItem(readable);
         }
