@@ -23,8 +23,8 @@
             get { return this.name; }
             private set 
             {
-                LibraryUserException.CheckIfNameIsNullOrEmpty(name, LibraryUserException.NullNameException);
-                LibraryUserException.CheckIfNameLengthIsValid(name, MinName, MaxName, LibraryUserException.NameLEngthExceptionMsg);
+                LibraryUserException.CheckIfNameIsNullOrEmpty(value, LibraryUserException.NullNameException);
+                LibraryUserException.CheckIfNameLengthIsValid(value, MaxName, MinName, LibraryUserException.NameLEngthExceptionMsg);
                 this.name = value; 
             }
         }
@@ -33,7 +33,7 @@
         {
             set 
             {
-                LibraryUserException.CheckPasswordLength(password, LibraryUserException.InvalidPasswordException);
+                LibraryUserException.CheckPasswordLength(value, LibraryUserException.InvalidPasswordException);
                 this.password = value; 
             }
         }
@@ -42,6 +42,11 @@
         {
             get { return this.profileType; }
             private set { this.profileType = value; }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0}|{1}|{2}", this.profileType.ToString().ToLower(), this.name, this.password);
         }
     }
 }

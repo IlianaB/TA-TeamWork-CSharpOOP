@@ -12,10 +12,10 @@
             string publisher = data[2];
             int year = int.Parse(data[3]);
             Genres genre = GetGenre(data[4]);
-            string authorOrIssue = data[5];
-            int counter = int.Parse(data[6]);
-            int totalRatings = int.Parse(data[7]);
-            int averageRating = int.Parse(data[8]);
+            int counter = int.Parse(data[5]);
+            int totalRatings = int.Parse(data[6]);
+            int averageRating = int.Parse(data[7]);
+            string authorOrIssue = data[8];
 
             Rating rating = new Rating(counter, totalRatings, averageRating);
 

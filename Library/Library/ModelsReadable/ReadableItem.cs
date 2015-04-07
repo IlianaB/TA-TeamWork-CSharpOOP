@@ -53,8 +53,14 @@
             }            
         }
 
-        //TODO
-        //public abstract string DisplayReadableInformation();
+        public override string ToString()
+        {
+            string result = string.Empty;
+
+            result = string.Format("{0}|{1}|{2}|{3}|{4}", this.GetType().Name, this.name, this.publisher, this.year, this.genre) + this.rating.ToString();
+
+            return result;
+        }
         
     }
 }

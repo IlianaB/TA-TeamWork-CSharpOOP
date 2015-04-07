@@ -36,7 +36,7 @@
 
         public static void CheckPasswordLength(string text, string message = null)
         {
-            if (text.Length > 6)
+            if (text.Length < 6)
             {
                 throw new IndexOutOfRangeException(message);
             }

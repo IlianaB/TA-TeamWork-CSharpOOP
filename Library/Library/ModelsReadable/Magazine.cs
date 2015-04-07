@@ -15,5 +15,10 @@
             get { return this.issue; }
             private set { this.issue = value; }
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + string.Format("|{0}", this.issue);
+        }
     }
 }

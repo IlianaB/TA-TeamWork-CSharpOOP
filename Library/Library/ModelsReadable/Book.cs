@@ -14,6 +14,11 @@
         {
             get { return this.author; }
             private set { this.author = value; }
-        } 
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + string.Format("|{0}", this.author);
+        }
     }
 }
