@@ -5,10 +5,6 @@
 
     public sealed class Library
     {
-        private const string ExceptionMessageIfReadableItemIsAlreadyInTheLibrary = "This item is already in this database!";
-        private const string ExceptionMessageIfReadableItemIsNotInTheLibrary = "This item is not in this database!";
-        private const string ExceptionMessageIfUserIsAlreadyInTheLibrary = "This user is already in this database!";
-
         //Creating single instance
         private static readonly Library SingleInstance = new Library("Online library");
 
@@ -70,44 +66,6 @@
             }
         }
 
-        public void AddReadableItem(IReadable readable)
-        {
-            if (this.readableItems.Contains(readable))
-            {
-                throw new ArgumentException(ExceptionMessageIfReadableItemIsAlreadyInTheLibrary);
-            }
-            else
-            {
-                this.readableItems.Add(readable);
-            }
-        }
-
-        public void RemoveReadableItem(IReadable readable)
-        {
-            if (!this.readableItems.Contains(readable))
-            {
-                throw new ArgumentException(ExceptionMessageIfReadableItemIsNotInTheLibrary);
-            }
-
-            else
-            {
-                this.readableItems.Remove(readable);
-            }
-        }
-
-        public void AddUser(IProfile user)
-        {
-            if (this.users.Contains(user))
-            {
-                throw new ArgumentException(ExceptionMessageIfUserIsAlreadyInTheLibrary);
-            }
-
-            else
-            {
-                this.users.Add(user);
-            }
-        }
-
         public void Start()
         {
             this.InitializeProfiles();
@@ -142,9 +100,47 @@
             }
         }
 
+        public void AddReadableItem(IReadable readable)
+        {
+            if (this.readableItems.Contains(readable))
+            {
+                throw new ArgumentException(LibraryItemException.ExistingItemException);
+            }
+            else
+            {
+                this.readableItems.Add(readable);
+            }
+        }
+
+        public void RemoveReadableItem(IReadable readable)
+        {
+            if (!this.readableItems.Contains(readable))
+            {
+                throw new ArgumentException(LibraryItemException.NotExistingItemException);
+            }
+
+            else
+            {
+                this.readableItems.Remove(readable);
+            }
+        }
+
+        public void AddUser(IProfile user)
+        {
+            if (this.users.Contains(user))
+            {
+                throw new ArgumentException(LibraryUserException.ExistingUserException);
+            }
+
+            else
+            {
+                this.users.Add(user);
+            }
+        }
+
         public bool isAlreadyInTheLibrary(IProfile profile)
         {
-            foreach (var profileItem in Library.Instance.Users)
+            foreach (var profileItem in this.Users)
             {
                 if (profile.Name == profileItem.Name)
                 {
@@ -157,7 +153,7 @@
 
         public bool isAlreadyInTheLibrary(IReadable readableItem)
         {
-            foreach (var readable in Library.Instance.ReadableItems)
+            foreach (var readable in this.ReadableItems)
             {
                 if (readable.Name == readableItem.Name)
                 {
@@ -170,17 +166,17 @@
 
         public void SaveReadableItem(IReadable readable)
         {
-            if (!Library.Instance.isAlreadyInTheLibrary(readable))
+            if (!this.isAlreadyInTheLibrary(readable))
             {
-                Library.Instance.dataManager.SerializeReadables(readable);
+                this.dataManager.SerializeReadables(readable);
             }
         }
 
         public void SaveProfile(IProfile profile)
         {
-            if (!Library.Instance.isAlreadyInTheLibrary(profile))
+            if (!this.isAlreadyInTheLibrary(profile))
             {
-                Library.Instance.dataManager.SerializeProfiles(profile);
+                this.dataManager.SerializeProfiles(profile);
             }
         }
     }
