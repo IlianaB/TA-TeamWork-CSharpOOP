@@ -26,6 +26,11 @@ namespace WpfApplication1
             InitializeComponent();
 
             Library.Library.Instance.Start();
+
+            //TODO: remove
+            var o = new UserPanel();
+            o.Show();
+            this.Close();
         }
         private void Login_Click(object sender, RoutedEventArgs e)
         {

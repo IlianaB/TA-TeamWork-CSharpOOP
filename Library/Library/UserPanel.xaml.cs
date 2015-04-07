@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Library;
 
 namespace WpfApplication1
 {
@@ -20,9 +21,8 @@ namespace WpfApplication1
     /// </summary>
     public partial class UserPanel : Window
     {
-        private ICollectionView books = CollectionViewSource.GetDefaultView(new myView().Books);
-        private ICollectionView users = CollectionViewSource.GetDefaultView(new myView().Users);
-        
+        private ICollectionView books = CollectionViewSource.GetDefaultView(Library.Library.Instance.ReadableItems);
+        private ICollectionView users = CollectionViewSource.GetDefaultView(Library.Library.Instance.Users);
 
         public UserPanel()
         {
@@ -38,6 +38,7 @@ namespace WpfApplication1
                 books.MoveCurrentToFirst();
             }
         }
+
         private void OnPrevious_Click(object sender, RoutedEventArgs e)
         {
             books.MoveCurrentToPrevious();

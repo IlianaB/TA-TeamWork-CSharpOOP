@@ -46,10 +46,21 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" >
                             <TextBlock Margin="20,10,0,0" FontSize="30" Text="{Binding Path=Name}"></TextBlock>
-                            <TextBlock Margin="10,0,0,0" FontSize="15" Text="{Binding Path=Author}"></TextBlock>
                             <StackPanel Orientation="Horizontal">
-                                <Label VerticalAlignment="Center" >Genre:</Label>
-                                <TextBlock VerticalAlignment="Center" Text="{Binding Path=Phone}"></TextBlock>
+                                <Label VerticalAlignment="Center" FontSize="18" >Genre:</Label>
+                                <TextBlock VerticalAlignment="Center"  FontSize="18" Text="{Binding Path=Genre}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label VerticalAlignment="Center" FontSize="18" >Publisher:</Label>
+                                <TextBlock VerticalAlignment="Center"  FontSize="18" Text="{Binding Path=Publisher}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label VerticalAlignment="Center" FontSize="18" >Year:</Label>
+                                <TextBlock VerticalAlignment="Center"  FontSize="18" Text="{Binding Path=Year}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label VerticalAlignment="Center" FontSize="18" >Rating:</Label>
+                                <TextBlock VerticalAlignment="Center"  FontSize="18" Text="{Binding Path=Rating.AverageRating, StringFormat=N0}"></TextBlock>
                             </StackPanel>
                         </StackPanel>
                         <Button Content="Previous" Grid.Row="1" Click="OnPrevious_Click"></Button>

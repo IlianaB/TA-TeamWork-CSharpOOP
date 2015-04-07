@@ -45,6 +45,11 @@
             private set { this.genre = value; }
         }
 
+        public Rating Rating
+        {
+            get { return this.rating; }
+        }
+
         public IEnumerable<Comment> Comment
         {
             get 
