@@ -24,6 +24,8 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+
+            Library.Library.Instance.Start();
         }
         private void Login_Click(object sender, RoutedEventArgs e)
         {
