@@ -5,9 +5,6 @@
 
     public class ReadableItemsFactory : IReadableItemsFactory
     {
-        //TODO!!!
-        //Constructors with Comments
-
         public IReadable CreateReadableItem(string[] data)
         {
             string itemType = data[0];
@@ -25,11 +22,33 @@
             switch (itemType)
             {
                 case "Book":
-                    return new Book(name, publisher, year, genre, rating, authorOrIssue);
+                    var book = new Book(name, publisher, year, genre, rating, authorOrIssue);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(book))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(book);
+                    }
+
+                    return book;
                 case "Magazine":
-                    return new Magazine(name, publisher, year, genre, rating, authorOrIssue);
+                    var magazine = new Magazine(name, publisher, year, genre, rating, authorOrIssue);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(magazine))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(magazine);
+                    }
+
+                    return magazine;
                 case "Newspaper":
-                    return new Newspaper(name, publisher, year, genre, rating, authorOrIssue);
+                    var newspaper = new Newspaper(name, publisher, year, genre, rating, authorOrIssue);
+
+                    if (!Library.Instance.isAlreadyInTheLibrary(newspaper))
+                    {
+                        Library.Instance.dataManager.SerializeReadables(newspaper);
+                    }
+
+                    return newspaper;
+
                 default: throw new ArgumentException("You must specify what kind of readable item you want to create!");
             }
         }
