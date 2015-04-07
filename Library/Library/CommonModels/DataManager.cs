@@ -42,5 +42,21 @@
             }
         }
 
+        public void SerializeProfiles(IProfile profile)
+        {
+            using (StreamWriter writer = new StreamWriter(@"..\..\Database\Users\Profiles.txt", true))
+            {
+                writer.WriteLine(profile);
+            }
+        }
+
+        public void SerializeReadables(IReadable readableItem)
+        {
+            using (StreamWriter writer = new StreamWriter(@"..\..\Database\Books\Readables.txt", true))
+            {
+                writer.WriteLine(readableItem);
+            }
+        }
+
     }
 }
