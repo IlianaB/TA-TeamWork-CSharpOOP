@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Library
+﻿namespace Library
 {
     static class Login
-    {
-        static string message = "Wrong username or password.";
+    {        
         static string username;
         static string password;
         static string filePath;
+
         static string Password
         {
             set
             {
                 if (value != FileManager.GetUserPassword(username))
                 {
-                    message = "Wrong password!";
-                    //throw new Exception(message);
-                    throw new ArgumentException(message);
+                    throw new LibraryCommonException(LibraryCommonException.WrongPasswordExceptionMessage);
                 }
             }
         }
@@ -38,9 +30,9 @@ namespace Library
 
             if (!FileManager.UserExist(username))
             {
-                message = "Username does not exist!";
-                throw new ArgumentException(message);
+                throw new LibraryCommonException(LibraryCommonException.WrongUsernameExceptionMessage);
             }
+
             Username = username;
             Password = password;
         }

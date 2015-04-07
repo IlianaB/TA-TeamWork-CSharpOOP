@@ -44,8 +44,8 @@
             }
 
             private set
-            {
-                // TODO: add some validation check and exceptions
+            {                
+                LibraryUserException.CheckIfNameIsNullOrEmpty(value, LibraryUserException.NullNameException);
                 this.name = value;
             }
         }
@@ -69,9 +69,7 @@
         public void Start()
         {
             this.InitializeProfiles();
-            this.InitializeReadableItems();
-
-            //var currentUser = new Profile(name, password, profileType);
+            this.InitializeReadableItems();            
         }
 
         public void InitializeReadableItems()

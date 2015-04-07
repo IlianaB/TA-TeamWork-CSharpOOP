@@ -24,7 +24,7 @@
             private set 
             {
                 LibraryUserException.CheckIfNameIsNullOrEmpty(value, LibraryUserException.NullNameException);
-                LibraryUserException.CheckIfNameLengthIsValid(value, MaxName, MinName, LibraryUserException.NameLEngthExceptionMsg);
+                LibraryUserException.CheckIfNameLengthIsValid(value, MaxName, MinName, LibraryUserException.NameLengthExceptionMsg);
                 this.name = value; 
             }
         }

@@ -27,7 +27,8 @@
                     return new Magazine(name, publisher, year, genre, rating, authorOrIssue);
                 case "Newspaper":
                     return new Newspaper(name, publisher, year, genre, rating, authorOrIssue);
-                default: throw new ArgumentException("You must specify what kind of readable item you want to create!");
+                default:
+                    throw new LibraryCommonException(LibraryCommonException.ReadableTypeExceptionMessage);
             }
         }
 

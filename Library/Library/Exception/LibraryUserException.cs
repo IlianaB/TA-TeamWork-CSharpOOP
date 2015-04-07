@@ -4,14 +4,12 @@
 
     public class LibraryUserException : ApplicationException
     {
-
         public const string InvalidPasswordException = "Password must be at least 6 symbols!";
         public const string InvalidUsernameException = "Username must be at least 8 symbols!";
         public const string ExistingUserException = "User already exists in the library!";
         public const string ExistingReadableItemInListMsg = "This item alredy exist in the list!";
         public const string NullNameException = "Name should be enterd!";
-        public const string NameLEngthExceptionMsg = "Name must be between 2 and 15 symbols long!";
-
+        public const string NameLengthExceptionMsg = "Name must be between 2 and 15 symbols long!";
 
         public LibraryUserException(string message)
             : base(message)

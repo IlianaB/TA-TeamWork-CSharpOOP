@@ -20,7 +20,7 @@
                 case "regularuser":
                     return new Moderator(name, password);
                 default:
-                    throw new ArgumentException("You must specify a profile type!");
+                    throw new LibraryCommonException(LibraryCommonException.PofileTypeExceptionMessage);
             }
         }
     }
