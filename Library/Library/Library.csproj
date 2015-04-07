@@ -65,7 +65,7 @@
     <Compile Include="Exception\LoginFailedException.cs" />
     <Compile Include="Factories\ProfilesFactory.cs" />
     <Compile Include="Factories\ReadableItemsFactory.cs" />
-    <Compile Include="FileManager.cs" />
+    <Compile Include="CommonModels\FileManager.cs" />
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IBook.cs" />
     <Compile Include="Interfaces\IMagazine.cs" />
@@ -78,7 +78,7 @@
     <Compile Include="Interfaces\IRegularUser.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Library.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="CommonModels\Login.cs" />
     <Compile Include="ModelsProfile\Admin.cs" />
     <Compile Include="ModelsProfile\Moderator.cs" />
     <Compile Include="ModelsProfile\Profile.cs" />
@@ -88,10 +88,10 @@
     <Compile Include="ModelsReadable\Magazine.cs" />
     <Compile Include="ModelsReadable\Newspaper.cs" />
     <Compile Include="ModelsReadable\ReadableItem.cs" />
-    <Compile Include="UserPanel.xaml.cs">
+    <Compile Include="UserInterface\UserPanel.xaml.cs">
       <DependentUpon>UserPanel.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="UserInterface\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -99,11 +99,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="UserInterface\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserPanel.xaml">
+    <Page Include="UserInterface\UserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
