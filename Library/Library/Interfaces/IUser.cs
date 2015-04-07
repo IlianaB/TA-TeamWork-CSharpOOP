@@ -5,9 +5,9 @@
 
     public interface IUser : IProfile
     {
-        IEnumerable<IReadable> ReadItems { get; set; }
-        IEnumerable<IReadable> CurrentlyReadItems { get; set; }
-        IEnumerable<IReadable> WishedToReadItems { get; set; }
+        ICollection<IReadable> ReadItems { get; }
+        ICollection<IReadable> CurrentlyReadItems { get; }
+        ICollection<IReadable> WishedToReadItems { get; }
 
         void AddToCurrentReadable(IReadable readable);
 

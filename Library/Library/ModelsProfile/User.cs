@@ -5,16 +5,40 @@
 
     public abstract class User : Profile, IUser
     {
-        public ICollection<IReadable> ReadItems { get; set; }
-        public ICollection<IReadable> CurrentlyReadItems { get; set; }
-        public ICollection<IReadable> WishedToReadItems { get; set; }
+        public ICollection<IReadable> readItems;
+        public ICollection<IReadable> currentlyReadItems;
+        public ICollection<IReadable> wishedToReadItems; 
 
         public User(string name, string password, ProfileType profileType) 
             :base(name, password, profileType)
         {
-            this.ReadItems = new List<IReadable>();
-            this.CurrentlyReadItems = new List<IReadable>();
-            this.WishedToReadItems = new List<IReadable>();
+            this.readItems = new List<IReadable>();
+            this.currentlyReadItems = new List<IReadable>();
+            this.wishedToReadItems = new List<IReadable>();
+        }
+        // Properties
+        public ICollection<IReadable> ReadItems
+        {
+            get
+            {
+                return new List<IReadable>(readItems);
+            }            
+        }
+
+        public ICollection<IReadable> CurrentlyReadItemset
+        {
+            get
+            {
+                return new List<IReadable>(currentlyReadItems);
+            }
+        }
+
+        public ICollection<IReadable> WishedToReadItems
+        {
+            get
+            {
+                return new List<IReadable>(wishedToReadItems);
+            }
         }
 
         public void AddReadItem(ReadableItem readableItem)
@@ -28,43 +52,6 @@
                 this.ReadItems.Add(readableItem);
             }            
         }
-
-        IEnumerable<IReadable> IUser.ReadItems
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        IEnumerable<IReadable> IUser.CurrentlyReadItems
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        IEnumerable<IReadable> IUser.WishedToReadItems
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
 
         public void AddToCurrentReadable(IReadable readable)
         {
