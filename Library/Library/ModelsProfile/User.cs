@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public abstract class User : Profile, IUser
+    public abstract class User : Profile, IUser, IProfile
     {
         public ICollection<IReadable> readItems;
         public ICollection<IReadable> currentlyReadItems;
@@ -40,12 +40,12 @@
                 return new List<IReadable>(wishedToReadItems);
             }
         }
-
-        public void AddReadItem(ReadableItem readableItem)
+        // Methods
+        public void AddReadItem(IReadable readableItem)
         {
             if (this.ReadItems.Contains(readableItem))
             {
-                throw new ArgumentException();
+                throw new LibraryUserException(LibraryUserException.ExistingReadableItemInListMsg);
             }
             else
             {
@@ -53,29 +53,58 @@
             }            
         }
 
-        public void AddToCurrentReadable(IReadable readable)
+        public void AddToCurrentReadable(IReadable readableItem)
         {
-            throw new NotImplementedException();
+            if (this.ReadItems.Contains(readableItem))
+            {
+                throw new LibraryUserException(LibraryUserException.ExistingReadableItemInListMsg);
+            }
+            else
+            {
+                this.ReadItems.Add(readableItem);
+            }
         }
 
-        public void AddToWishedReadable(IReadable readable)
+        public void RemoveCurrentReadable(IReadable readableItem)
         {
-            throw new NotImplementedException();
+            if (this.ReadItems.Contains(readableItem))
+            {
+                throw new LibraryUserException(LibraryUserException.ExistingReadableItemInListMsg);
+            }
+            else
+            {
+                this.ReadItems.Remove(readableItem);
+            }
         }
 
-        public void RemoveCurrentReadable(IReadable readable)
+        public void AddToWishedReadable(IReadable readableItem)
         {
-            throw new NotImplementedException();
+            if (this.ReadItems.Contains(readableItem))
+            {
+                throw new LibraryUserException(LibraryUserException.ExistingReadableItemInListMsg);
+            }
+            else
+            {
+                this.ReadItems.Add(readableItem);
+            }
         }
 
-        public void RemoveWishedReadable(IReadable readable)
+        public void RemoveWishedReadable(IReadable readableItem)
         {
-            throw new NotImplementedException();
+            if (this.ReadItems.Contains(readableItem))
+            {
+                throw new LibraryUserException(LibraryUserException.ExistingReadableItemInListMsg);
+            }
+            else
+            {
+                this.ReadItems.Remove(readableItem);
+            }
         }
 
-        public void FinishReadable(IReadable readable)
+        public void FinishReadable(IReadable readableItem)
         {
-            throw new NotImplementedException();
+            RemoveCurrentReadable(readableItem);
+            AddReadItem(readableItem);
         }
     }
 }
