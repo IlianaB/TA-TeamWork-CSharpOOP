@@ -1,28 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Library.Start" Collapsed="true">
-    <Position X="14.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Start.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Library.Comment" Collapsed="true">
-    <Position X="12.5" Y="0.5" Width="1.5" />
+    <Position X="16.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAACAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>CommonModels\Comment.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Library.DataManager" Collapsed="true">
+    <Position X="14.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>CommonModels\DataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Library.Search" Collapsed="true">
-    <Position X="12.5" Y="2.5" Width="1.5" />
+    <Position X="16.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAA=</HashCode>
       <FileName>CommonModels\Search.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Library.LibraryItemException" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAACAAAAAACAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exception\LibraryItemException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.LibraryUserException" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAQCAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exception\LibraryUserException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.LoginFailedException" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAg=</HashCode>
+      <FileName>Exception\LoginFailedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Library.ProfilesFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="1.5" Width="1.5" />
+    <Position X="16.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Factories\ProfilesFactory.cs</FileName>
@@ -30,7 +51,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Library.ReadableItemsFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16" Y="1.5" Width="1.5" />
+    <Position X="14.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Factories\ReadableItemsFactory.cs</FileName>
@@ -38,7 +59,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Library.Admin" Collapsed="true">
-    <Position X="5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>ModelsProfile\Admin.cs</FileName>
@@ -62,7 +83,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Library.RegularUser" Collapsed="true">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Position X="5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>ModelsProfile\RegularUser.cs</FileName>
@@ -70,9 +91,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Library.User" Collapsed="true">
-    <Position X="1.5" Y="4.75" Width="1.5" />
+    <Position X="3.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAQAQAAGAAAAQAAABAAACAAAAAEIICAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAYAQAAGAAAAQAAAAAAACAAAAAEIICAAAAAAA=</HashCode>
       <FileName>ModelsProfile\User.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -92,7 +113,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Library.Newspaper" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="5.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>ModelsReadable\Newspaper.cs</FileName>
@@ -106,99 +127,85 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Library.LibraryItemException" Collapsed="true">
-    <Position X="14.25" Y="0.5" Width="1.5" />
+  <Class Name="Library.Library" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAACAAAAAACAAAQAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Exception\LibraryItemException.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.LibraryUserException" Collapsed="true">
-    <Position X="16" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAQCAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Exception\LibraryUserException.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.LoginFailedException" Collapsed="true">
-    <Position X="12.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAg=</HashCode>
-      <FileName>Exception\LoginFailedException.cs</FileName>
+      <HashCode>KAAAADAEADAAAAgACAAAAC4AAAAEIAAgQiABAAAAACA=</HashCode>
+      <FileName>Library.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="Library.Rating" Collapsed="true">
-    <Position X="12.5" Y="3.75" Width="1.5" />
+    <Position X="14.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEBAAAAAAAIAAAAAAAAAAAAAQAAIAAAACAAAAAAEAA=</HashCode>
       <FileName>CommonModels\Rating.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="Library.IAdmin" Collapsed="true">
-    <Position X="5.5" Y="7.75" Width="1.5" />
+    <Position X="12" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Interfaces\IAdmin.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IModerator" Collapsed="true">
-    <Position X="10" Y="9.25" Width="1.5" />
+    <Position X="7.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IModerator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IProfile" Collapsed="true">
-    <Position X="7.75" Y="6.5" Width="1.5" />
+    <Position X="9.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IProfile.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IProfilesFactory" Collapsed="true">
-    <Position X="12.5" Y="5" Width="1.5" />
+    <Position X="14.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Interfaces\IProfilesFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IReadable" Collapsed="true">
-    <Position X="14.25" Y="5" Width="1.5" />
+    <Position X="16.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IReadable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IReadableItemsFactory" Collapsed="true">
-    <Position X="16" Y="5" Width="1.5" />
+    <Position X="18.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Interfaces\IReadableItemsFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IRegularUser" Collapsed="true">
-    <Position X="7.75" Y="9.25" Width="1.5" />
+    <Position X="9.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IRegularUser.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Library.IUser" Collapsed="true">
-    <Position X="8.75" Y="7.75" Width="1.5" />
+    <Position X="8.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAYAQAAAAAAAQAAAAAAACAAAAAEAACAAAAAAA=</HashCode>
       <FileName>Interfaces\IUser.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Library.Genres" Collapsed="true">
-    <Position X="12.5" Y="6" Width="1.5" />
+    <Position X="14.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAEAAAAEAAABAAAAgAAAAAAAAAAAQAAAgCgAACAAA=</HashCode>
       <FileName>CommonModels\Genres.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Library.ProfileType" Collapsed="true">
-    <Position X="14.25" Y="6" Width="1.5" />
+    <Position X="16.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAAAAAAAAEAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CommonModels\ProfileType.cs</FileName>
