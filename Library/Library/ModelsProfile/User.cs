@@ -25,7 +25,7 @@
             }            
         }
 
-        public ICollection<IReadable> CurrentlyReadItemset
+        public ICollection<IReadable> CurrentlyReadItems
         {
             get
             {

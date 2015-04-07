@@ -8,14 +8,14 @@
     {
         public List<string> ReadProfiles()
         {
-            using (StreamReader reader = new StreamReader(@"..\Database\Users\Profiles.txt"))
+            using (StreamReader reader = new StreamReader(@"..\..\Database\Users\Profiles.txt"))
             {
-                string line = reader.ReadLine();
+                string line = string.Empty;
                 List<string> allLines = new List<string>();
 
                 StringBuilder result = new StringBuilder();
 
-                while (line != null)
+                while ((line = reader.ReadLine()) != null)
                 {
                     allLines.Add(line);
                 }
@@ -26,14 +26,14 @@
 
         public List<string> ReadReadables()
         {
-            using (StreamReader reader = new StreamReader(@"..\Database\Books\Readables.txt"))
+            using (StreamReader reader = new StreamReader(@"..\..\Database\Books\Readables.txt"))
             {
-                string line = reader.ReadLine();
+                string line = string.Empty;
                 List<string> allLines = new List<string>();
 
                 StringBuilder result = new StringBuilder();
 
-                while (line != null)
+                while ((line = reader.ReadLine()) != null)
                 {
                     allLines.Add(line);
                 }

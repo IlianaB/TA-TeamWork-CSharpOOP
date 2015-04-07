@@ -13,11 +13,11 @@
 
             switch (profileType)
             {
-                case "Admin":
+                case "administrator":
                     return new Admin(name, password);
-                case "Moderator":
+                case "moderator":
                     return new Moderator(name, password);
-                case "RegularUser":
+                case "regularuser":
                     return new RegularUser(name, password);
                 default:
                     throw new ArgumentException("You must specify a profile type!");
