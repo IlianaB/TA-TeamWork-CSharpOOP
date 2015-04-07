@@ -67,7 +67,10 @@
     <Compile Include="Factories\ReadableItemsFactory.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="Interfaces\IAdmin.cs" />
+    <Compile Include="Interfaces\IBook.cs" />
+    <Compile Include="Interfaces\IMagazine.cs" />
     <Compile Include="Interfaces\IModerator.cs" />
+    <Compile Include="Interfaces\INewspaper.cs" />
     <Compile Include="Interfaces\IProfile.cs" />
     <Compile Include="Interfaces\IProfilesFactory.cs" />
     <Compile Include="Interfaces\IReadable.cs" />
