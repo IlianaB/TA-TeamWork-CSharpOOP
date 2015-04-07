@@ -7,8 +7,7 @@ namespace Library
     {
         static void Main()
         {
-            
-
+            Library.Instance.Start();
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IProfilesFactory
     {
-        IProfile CreateProfile(string profileType, string name, string password);
+        IProfile CreateProfile(string[] data);
     }
 }

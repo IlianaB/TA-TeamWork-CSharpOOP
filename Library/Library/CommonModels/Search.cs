@@ -3,11 +3,11 @@
     using System;
     using System.Collections.Generic;
 
-    public static class Search
+    public class Search
     {
         private const string ExceptionMessageForKeywordsLength = "Keyword cannot be less than 3 symbols";
 
-        public static ICollection<IReadable> SearchReadableItem(string keyword)
+        public ICollection<IReadable> SearchReadableItem(string keyword)
         {
             if (keyword.Length < 3)
             {

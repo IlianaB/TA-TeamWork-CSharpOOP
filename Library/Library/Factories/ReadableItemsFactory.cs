@@ -7,10 +7,18 @@
         //TODO!!!
         //Constructors with Comments
 
-        public IReadable CreateReadableItem(string itemType, string name, string publisher, int year, string stringGenre, 
-                                            string authorOrIssue, int counter = 0, int totalRatings = 0, int averageRating = 0)
+        public IReadable CreateReadableItem(string[] data)
         {
-            Genres genre = GetGenre(stringGenre);
+            string itemType = data[0];
+            string name = data[1];
+            string publisher = data[2];
+            int year = int.Parse(data[3]);
+            Genres genre = GetGenre(data[4]);
+            string authorOrIssue = data[5];
+            int counter = int.Parse(data[6]);
+            int totalRatings = int.Parse(data[7]);
+            int averageRating = int.Parse(data[8]);
+
             Rating rating = new Rating(counter, totalRatings, averageRating);
 
             switch (itemType)

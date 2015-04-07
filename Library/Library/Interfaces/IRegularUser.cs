@@ -4,5 +4,6 @@
 
     public interface IRegularUser : IUser
     {
+        void ReportComment();
     }
 }

@@ -98,5 +98,29 @@
                 this.users.Add(user);
             }
         }
+
+         public void InitializeReadableItems()
+         {
+             //Receive string array from file manager
+             //Return arraywith objects
+
+         }
+
+         public void InitializeProfiles()
+         { 
+             //Receive string array from file manager
+             //Return array with oobjects
+         }
+
+         public void Start()
+         {
+             ProfilesFactory profilesFactory = new ProfilesFactory();
+             ReadableItemsFactory readableItemsFactory = new ReadableItemsFactory();
+             Search search = new Search();
+             this.InitializeProfiles();
+             this.InitializeReadableItems();
+
+             //var currentUser = new Profile(name, password, profileType);
+         }
     }
 }
