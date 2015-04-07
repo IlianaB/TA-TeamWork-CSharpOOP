@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApplication1.UserPanel"
+﻿<Window x:Class="UserInterface.UserPanel"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="UserPanel" 
@@ -24,8 +24,8 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel>
-                        <TextBox></TextBox>
-                        <Button Content="Search"></Button>
+                        <TextBox Name="Search_Input"></TextBox>
+                        <Button Content="Search" Click="OnSearch_Click"></Button>
                         <ListBox ItemsSource="{Binding}"
                                  DisplayMemberPath="Name" 
                                  SelectedValuePath="Age"

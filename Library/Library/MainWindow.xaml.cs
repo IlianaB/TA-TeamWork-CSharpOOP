@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Library;
 
-namespace WpfApplication1
+namespace UserInterface
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,12 +26,8 @@ namespace WpfApplication1
             InitializeComponent();
 
             Library.Library.Instance.Start();
-
-            //TODO: remove
-            var o = new UserPanel();
-            o.Show();
-            this.Close();
         }
+
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             try

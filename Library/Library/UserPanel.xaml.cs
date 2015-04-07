@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Library;
 
-namespace WpfApplication1
+namespace UserInterface
 {
     /// <summary>
     /// Interaction logic for UserPanel.xaml
@@ -29,7 +29,7 @@ namespace WpfApplication1
             InitializeComponent();
             DataContext = books;
         }
-        
+
         private void OnNext_Click(object sender, RoutedEventArgs e)
         {
             books.MoveCurrentToNext();
@@ -58,61 +58,17 @@ namespace WpfApplication1
             DataContext = users;
         }
 
-
-
-    }
-
-    //Delta testing stuff below this line
-    public class User
-    {
-        public string Name { get; set; }
-        public string Age { get; set; }
-        public string Phone { get; set; }
-        public User(string n, string a, string phone)
+        private void OnSearch_Click(object sender, RoutedEventArgs e)
         {
-            this.Name = n;
-            this.Phone = phone;
-            this.Age = a;
-        }
-    }
-    public class Book
-    {
-        public string Name { get; set; }
-        public string Author { get; set; }
-        public string Phone { get; set; }
-        public Book(string n, string a, string phone)
-        {
-            this.Name = n;
-            this.Phone = phone;
-            this.Author = a;
-        }
-    }
-    public class myView : List<Object>
-    {
-        public List<User> Users
-        {
-            get
+            try
             {
-                return new List<User>
-                {
-                    new User("Ivan","15","0878"),
-                    new User("petyr","23","08748"),
-                    new User("ilia","36","0826878"),
-                    new User("ahmed","12","35223")
-                };
+                var collectionResult = Library.Library.Instance.search.SearchReadableItem(this.Search_Input.Text);
+
+                DataContext = collectionResult;
             }
-        }
-        public List<Book> Books
-        {
-            get
+            catch (LibraryCommonException ex)
             {
-                return new List<Book>
-                {
-                    new Book("Book1Book1Book1Book1Bo","Author6781","wtfis that aaaa"),
-                    new Book("Book21","Author111","wtfis that aaaa"),
-                    new Book("Book231","Author51","wtfis that aaaa"),
-                    new Book("Book11","Author21","wtfis that aaaa"),
-                };
+                MessageBox.Show(ex.Message);
             }
         }
     }
