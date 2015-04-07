@@ -8,12 +8,13 @@
         {
         }
 
-        public void AddReadableItem(IReadable readable)
+        public void SendToLibrary(IReadable readable)
         {
-            throw new System.NotImplementedException();
-        }        
+            Library.Instance.SaveReadableItem(readable);
+            Library.Instance.AddReadableItem(readable);
+        }
 
-        public void RemoveReadableItem(IReadable readable)
+        public void RemoveFromLibrary(IReadable readable)
         {
             throw new System.NotImplementedException();
         }

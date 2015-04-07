@@ -167,5 +167,21 @@
 
             return false;
         }
+
+        public void SaveReadableItem(IReadable readable)
+        {
+            if (!Library.Instance.isAlreadyInTheLibrary(readable))
+            {
+                Library.Instance.dataManager.SerializeReadables(readable);
+            }
+        }
+
+        public void SaveProfile(IProfile profile)
+        {
+            if (!Library.Instance.isAlreadyInTheLibrary(profile))
+            {
+                Library.Instance.dataManager.SerializeProfiles(profile);
+            }
+        }
     }
 }

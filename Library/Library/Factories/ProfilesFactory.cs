@@ -14,34 +14,11 @@
             switch (profileType)
             {
                 case "administrator":
-                    var profileAdmin = new Admin(name, password);
-
-                    if (!Library.Instance.isAlreadyInTheLibrary(profileAdmin))
-                    {
-                        Library.Instance.dataManager.SerializeProfiles(profileAdmin);
-                    }
-
-                    return profileAdmin;
+                    return new Admin(name, password);
                 case "moderator":
-                    var profileMod = new Moderator(name, password);
-
-                    if (!Library.Instance.isAlreadyInTheLibrary(profileMod))
-                    {
-                        Library.Instance.dataManager.SerializeProfiles(profileMod);
-                    }
-
-                    return profileMod;
-
+                    return new Moderator(name, password);
                 case "regularuser":
-                    var profileUser = new Moderator(name, password);
-
-                    if (!Library.Instance.isAlreadyInTheLibrary(profileUser))
-                    {
-                        Library.Instance.dataManager.SerializeProfiles(profileUser);
-                    }
-
-                    return profileUser;
-
+                    return new Moderator(name, password);
                 default:
                     throw new ArgumentException("You must specify a profile type!");
             }

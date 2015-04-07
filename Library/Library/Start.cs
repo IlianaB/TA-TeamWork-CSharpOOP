@@ -12,7 +12,10 @@
             Console.WriteLine();
 
             //string[] test = { "moderator", "Mihail", "parolkata" };
-            //Library.Instance.profilesFactory.CreateProfile(test);
+            //var profile = Library.Instance.profilesFactory.CreateProfile(test);
+            //Library.Instance.SaveProfile(profile);
+            //Library.Instance.AddUser(profile);
+            //Console.WriteLine();
         }
     }
 }

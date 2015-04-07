@@ -46,7 +46,8 @@
         {
             using (StreamWriter writer = new StreamWriter(@"..\..\Database\Users\Profiles.txt", true))
             {
-                writer.WriteLine(profile);
+                writer.WriteLine();
+                writer.Write(profile);
             }
         }
 
@@ -54,9 +55,9 @@
         {
             using (StreamWriter writer = new StreamWriter(@"..\..\Database\Books\Readables.txt", true))
             {
-                writer.WriteLine(readableItem);
+                writer.WriteLine();
+                writer.Write(readableItem);
             }
         }
-
     }
 }
