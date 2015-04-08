@@ -16,7 +16,7 @@
             this.currentlyReadItems = new List<IReadable>();
             this.wishedToReadItems = new List<IReadable>();
         }
-        // Properties
+
         public ICollection<IReadable> ReadItems
         {
             get
@@ -40,7 +40,7 @@
                 return new List<IReadable>(wishedToReadItems);
             }
         }
-        // Methods
+
         public void AddReadItem(IReadable readableItem)
         {
             if (this.ReadItems.Contains(readableItem))

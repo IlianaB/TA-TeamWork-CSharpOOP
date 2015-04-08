@@ -17,7 +17,7 @@
 
         public void RemoveFromLibrary(IReadable readable)
         {
-            throw new System.NotImplementedException();
+            Library.Instance.RemoveReadableItem(readable);
         }
     }
 }

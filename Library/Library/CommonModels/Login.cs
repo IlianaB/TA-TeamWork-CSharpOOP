@@ -3,6 +3,7 @@
     static class Login
     {        
         static string username;
+        static string password;
 
         static string Password
         {
@@ -12,6 +13,8 @@
                 {
                     throw new LibraryCommonException(LibraryCommonException.WrongPasswordExceptionMessage);
                 }
+
+                password = value;
             }
         }
 
