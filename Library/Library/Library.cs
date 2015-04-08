@@ -17,7 +17,7 @@
         public readonly Search search;
         public readonly DataManager dataManager;
 
-        public Library(string name)
+        private Library(string name)
         {
             this.Name = name;
             this.readableItems = new List<IReadable>();
