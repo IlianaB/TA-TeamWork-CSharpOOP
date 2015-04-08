@@ -1,6 +1,8 @@
 ﻿namespace Library
 {
-    public class Book : ReadableItem
+    using UserInterface.Interfaces;
+
+    public class Book : ReadableItem, IBook, IReadable
     {
         private string author;
 

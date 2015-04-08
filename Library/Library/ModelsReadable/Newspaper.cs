@@ -1,6 +1,8 @@
 ﻿namespace Library
 {
-    public class Newspaper : ReadableItem
+    using UserInterface.Interfaces;
+
+    public class Newspaper : ReadableItem, INewspaper, IReadable
     {
         private string issue;
 

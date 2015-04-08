@@ -3,8 +3,6 @@
     static class Login
     {        
         static string username;
-        static string password;
-        static string filePath;
 
         static string Password
         {
